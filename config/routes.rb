@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
   root'home#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/*path' => 'home#index'
+  namespace :api do
+    namespace :v1 do
+      get 'users/all', to: 'users#index'
+      post 'signup', to: 'users#create'
+      post 'login', to: 'users#login'
+      get 'user/:id', to: 'users#show'
+      delete 'user/:id', to: 'users#destroy'
+    end
+  end
 end

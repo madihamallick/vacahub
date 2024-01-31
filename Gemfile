@@ -25,6 +25,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'bcrypt', '~> 3.1.7'
+gem 'pg'
+gem 'jwt'
+
+gem 'active_model_serializers'
+
 gem 'tailwindcss-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
